@@ -3,7 +3,6 @@ import MovieCard from './MovieCard'
 
 
 const MovieList = ({title,movies}) => {
-    console.log(movies);
     const movieCards = Array.isArray(movies)
     ? movies.map(movie => <MovieCard key={movie.id} posterPath={movie.poster_path} />)
     : null;
@@ -13,7 +12,6 @@ const MovieList = ({title,movies}) => {
         <div className='flex overflow-x-scroll no-scrollbar'>
             <div className='flex '>
               {movieCards}
-            
             </div>
         </div>
     </div>

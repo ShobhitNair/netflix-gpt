@@ -4,7 +4,6 @@ import { addTrailerVideo } from "../utils/movieSlice";
 import { useEffect } from "react";
 
 const useMovieTrailer =(movieId)=>{
-    console.log(movieId);
     const dispatch = useDispatch();
 
   const getMovieVideos = async () => {
@@ -13,7 +12,6 @@ const useMovieTrailer =(movieId)=>{
       API_OPTIONS
     );
     const json = await data.json();
-    console.log(json);
 
     const trailers = json.results.filter((video) => video.type == "Trailer");
     const trailer = trailers.length ? trailers[0] : json.results[0];
