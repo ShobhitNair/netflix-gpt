@@ -31,16 +31,16 @@ const GptSearchBar = () => {
 
   };
   return (
-    <div>
-      <form className="bg-black p-20" onSubmit={(e) => e.preventDefault()}>
+    <div className="m-0 p-0" >
+      <form className="bg-black p-20 " onSubmit={(e) => e.preventDefault()}>
         <input
         ref={searchText}
           type="text"
-          className="ml-12 mt-6 p-1 px-20 rounded-md w-1/3"
+          className=" md:ml-12 mt-28 md:mt-6 p-1 px-5 md:px-20 rounded-md w-2/3 md:w-1/3 "
           placeholder="What would you like to watch today?"
         />
         <button
-          className="bg-red-600 m-5 p-2 rounded-lg"
+          className="bg-red-600 m-1 md:m-5 p-2 rounded-lg"
           onClick={handleGptSearchClick}
         >
           Search
