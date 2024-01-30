@@ -73,7 +73,7 @@ const Login = () => {
 <div className="absolute flex items-center justify-center w-full h-full">
 <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-11/12 sm:w-7/12 md:w-4/12 md:flex md:flex-col  bg-black p-5 sm:p-10 md:p-10 my-36  text-white bg-opacity-80"
+        className="absolute w-9/12 sm:w-7/12 md:w-4/12 md:flex md:flex-col  bg-black p-3 sm:p-10 md:p-10 my-36  text-white bg-opacity-80"
       >
         <h1 className="font-bold text-3xl  mb-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
@@ -83,24 +83,24 @@ const Login = () => {
             ref={name}
             type="name"
             placeholder="Name"
-            className="px-14 sm:px-10 md:px-16 py-2  mb-2 bg-gray-900"
+            className=" sm:px-10 md:px-16 py-2 m-2  mb-2 bg-gray-900"
           />
         )}
         <input
           ref={email}
           type="text"
-          placeholder="Email"
-          className="px-14 sm:px-10 md:px-16  py-2  mb-2 bg-gray-900"
+          placeholder="Email Address"
+          className=" sm:px-10 md:px-16  py-2 m-2 mb-2 bg-gray-900"
         />
         <input
           ref={password}
           type="password"
           placeholder="Password"
-          className="px-14 sm:px-10 md:px-16 py-2  bg-gray-900"
+          className=" sm:px-10 md:px-16 py-2 m-2  bg-gray-900"
         />
         <p className="text-red-500 font-bold text-lg p-2">{errorMessage}</p>
         <button
-          className="px-4 sm:px-16 md:px-16 py-4 mt-6   bg-red-700"
+          className="px-4  sm:px-16 md:px-16 py-4 m-2 mt-6   bg-red-700"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "SignUp"}
