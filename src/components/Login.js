@@ -62,20 +62,20 @@ const Login = () => {
     setIsSignInForm(!isSignInForm);
   };
   return (
-    <div className="overscroll-contain">
+    <div className="h-5/6 md:overflow-y-hidden items-center justify-center">
       <Header />
-      <div className="absolute">
-        <img
+      <div className="">
+        <img className="absolute w-full h-full "
           src={BACKGROUND_IMG}
           alt="bg"
         />
       </div>
-
-      <form
+<div className="absolute flex items-center justify-center w-full h-full">
+<form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-3/12 bg-black  p-12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80"
+        className="absolute w-11/12 sm:w-7/12 md:w-4/12 md:flex md:flex-col  bg-black p-5 sm:p-10 md:p-10 my-36  text-white bg-opacity-80"
       >
-        <h1 className="font-bold text-3xl -ml-2 mb-4">
+        <h1 className="font-bold text-3xl  mb-4">
           {isSignInForm ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignInForm && (
@@ -83,24 +83,24 @@ const Login = () => {
             ref={name}
             type="name"
             placeholder="Name"
-            className="px-11 py-2 -ml-1 mb-2 bg-gray-900"
+            className="px-14 sm:px-10 md:px-16 py-2  mb-2 bg-gray-900"
           />
         )}
         <input
           ref={email}
           type="text"
-          placeholder="Email Address"
-          className="px-11 py-2 -ml-1 mb-2 bg-gray-900"
+          placeholder="Email"
+          className="px-14 sm:px-10 md:px-16  py-2  mb-2 bg-gray-900"
         />
         <input
           ref={password}
           type="password"
           placeholder="Password"
-          className="px-11 py-2 -ml-1 bg-gray-900"
+          className="px-14 sm:px-10 md:px-16 py-2  bg-gray-900"
         />
         <p className="text-red-500 font-bold text-lg p-2">{errorMessage}</p>
         <button
-          className="px-28 py-2 mt-6 -ml-1  bg-red-700"
+          className="px-4 sm:px-16 md:px-16 py-4 mt-6   bg-red-700"
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "SignUp"}
@@ -111,6 +111,8 @@ const Login = () => {
             : "Already Registered? Sign Up Now.."}
         </p>
       </form>
+</div>
+      
     </div>
   );
 };
